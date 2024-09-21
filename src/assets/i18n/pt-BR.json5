@@ -2433,10 +2433,10 @@
   "footer.copyright": "copyright © 2002-{{ year }}",
 
   // "footer.link.dspace": "DSpace software",
-  "footer.link.dspace": "DSpace software",
+  "footer.link.dspace": "Instituto Federal do Tocantins",
 
   // "footer.link.lyrasis": "LYRASIS",
-  "footer.link.lyrasis": "LYRASIS",
+  "footer.link.lyrasis": "IFTO",
 
   // "footer.link.cookies": "Cookie settings",
   "footer.link.cookies": "Configurações de Cookies",

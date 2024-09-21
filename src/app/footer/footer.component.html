@@ -56,11 +56,8 @@
   <div class="bottom-footer p-1 d-flex justify-content-center align-items-center text-white">
     <div class="content-container">
       <p class="m-0">
-        <a class="text-white"
-           href="http://www.dspace.org/">{{ 'footer.link.dspace' | translate}}</a>
-        {{ 'footer.copyright' | translate:{year: dateObj | date:'y'} }}
-        <a class="text-white"
-           href="https://www.lyrasis.org/">{{ 'footer.link.lyrasis' | translate}}</a>
+        <a class="text-white" href="http://www.dspace.org/">{{ 'footer.link.dspace' | translate}}{{ ' - '}}</a>
+        <a class="text-white" href="https://www.lyrasis.org/">{{ 'footer.link.lyrasis' | translate}}</a>
       </p>
       <ul class="footer-info list-unstyled d-flex justify-content-center mb-0">
         <li>
@@ -69,16 +66,14 @@
           </button>
         </li>
         <li *ngIf="showPrivacyPolicy">
-          <a class="btn text-white"
-             routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate}}</a>
+          <a class="btn text-white" routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate}}</a>
         </li>
         <li *ngIf="showEndUserAgreement">
-          <a class="btn text-white"
-             routerLink="info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate}}</a>
+          <a class="btn text-white" routerLink="info/end-user-agreement">
+            {{ 'footer.link.end-user-agreement' | translate}}</a>
         </li>
         <li *ngIf="showSendFeedback$ | async">
-          <a class="btn text-white"
-             routerLink="info/feedback">{{ 'footer.link.feedback' | translate}}</a>
+          <a class="btn text-white" routerLink="info/feedback">{{ 'footer.link.feedback' | translate}}</a>
         </li>
       </ul>
     </div>

@@ -47,9 +47,9 @@
           padding: var(--ds-navbar-item-vertical-padding) var(--ds-navbar-item-horizontal-padding);
         }
         .ds-menu-item, .ds-menu-toggler-wrapper {
-          color: var(--ds-navbar-link-color) !important;
+          color: #19882c !important;
           &:hover, &:focus {
-            color: var(--ds-navbar-link-color-hover) !important;
+            color: darken(#19882c, 15%) !important;
           }
         }
 
