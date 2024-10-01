@@ -27,11 +27,16 @@ services:
       # __P__ => "." (e.g. dspace__P__dir => dspace.dir)
       # __D__ => "-" (e.g. google__D__metadata => google-metadata)
       # dspace.dir, dspace.server.url, dspace.ui.url and dspace.name
+      rest__P__cors__P__allowed__D__origins: http://85.31.62.57:4000
+      cors__P__enabled: true
+      cors__P__allowed__P__origins: http://85.31.62.57:4000
+      cors__P__allowed__P__methods: GET, POST, PUT, DELETE, OPTIONS
+      cors__P__allowed__P__headers: Content-Type, Authorization
       dspace__P__dir: /dspace
       # Uncomment to set a non-default value for dspace.server.url or dspace.ui.url
-      dspace__P__server__P__url: http://localhost:8080/server
-      dspace__P__ui__P__url: http://localhost:4000
-      dspace__P__name: "DSpace Started with Docker Compose"
+      dspace__P__server__P__url: http://85.31.62.57:8080/server
+      dspace__P__ui__P__url: http://85.31.62.57:4000
+      dspace__P__name: "DSpace Started with Docker Compose v2"
       # db.url: Ensure we are using the 'dspacedb' image for our database
       db__P__url: "jdbc:postgresql://dspacedb:5432/dspace"
       # solr.server: Ensure we are using the 'dspacesolr' image for Solr
