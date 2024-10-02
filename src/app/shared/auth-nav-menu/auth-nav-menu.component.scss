@@ -1,4 +1,5 @@
-#loginDropdownMenu, #logoutDropdownMenu {
+#loginDropdownMenu,
+#logoutDropdownMenu {
   min-width: 330px;
   z-index: 1002;
 }
@@ -7,20 +8,27 @@
   min-height: 75px;
 }
 
-.dropdown-item.active, .dropdown-item:active,
-.dropdown-item:hover, .dropdown-item:focus {
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:hover,
+.dropdown-item:focus {
   background-color: transparent !important;
 }
 
-.loginLink, .dropdownLogin, .logoutLink, .dropdownLogout {
-  color: var(--ds-header-icon-color);
+.loginLink,
+.dropdownLogin,
+.logoutLink,
+.dropdownLogout {
+  color: #19882c;
 
-  &:hover, &:focus {
-    color: var(--ds-header-icon-color-hover);
+  &:hover,
+  &:focus {
+    color: #19882c;
   }
 }
 
-.dropdownLogin, .dropdownLogout {
+.dropdownLogin,
+.dropdownLogout {
   &:not(:focus-visible).active,
   &:not(:focus-visible):active,
   &:not(:focus-visible).active:focus,
