@@ -2764,7 +2764,7 @@
   "home.title": "Início",
 
   // "home.top-level-communities.head": "Communities in DSpace",
-  "home.top-level-communities.head": "Comunidades no DSpace",
+  "home.top-level-communities.head": "Comunidades",
 
   // "home.top-level-communities.help": "Select a community to browse its collections.",
   "home.top-level-communities.help": "Selecione uma comunidade para navegar por suas coleções",
@@ -4231,7 +4231,7 @@
   "menu.section.browse_community_by_title": "Por Título",
 
   // "menu.section.browse_global": "All of DSpace",
-  "menu.section.browse_global": "Tudo no DSpace",
+  "menu.section.browse_global": "Tudo no Repositório",
 
   // "menu.section.browse_global_by_author": "By Author",
   "menu.section.browse_global_by_author": "Por Autor",
