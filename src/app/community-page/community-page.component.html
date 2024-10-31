@@ -5,9 +5,15 @@
       <div class="d-flex flex-row border-bottom mb-4 pb-4">
         <header class="comcol-header mr-auto">
           <!-- Community name -->
-          <ds-comcol-page-header [name]="dsoNameService.getName(communityPayload)"></ds-comcol-page-header>
+          <ng-container [ngSwitch]="dsoNameService.getName(communityPayload)">
+            <ds-comcol-page-header *ngSwitchCase="'Articles'" [name]="'Artigos'"></ds-comcol-page-header>
+            <ds-comcol-page-header *ngSwitchCase="'Publications'" [name]="'Publicações'"></ds-comcol-page-header>
+            <ds-comcol-page-header *ngSwitchDefault
+              [name]="dsoNameService.getName(communityPayload)"></ds-comcol-page-header>
+          </ng-container>
           <!-- Community logo -->
-          <ds-comcol-page-logo *ngIf="logoRD$" [logo]="(logoRD$ | async)?.payload" [alternateText]="'community.logo' | translate">
+          <ds-comcol-page-logo *ngIf="logoRD$" [logo]="(logoRD$ | async)?.payload"
+            [alternateText]="'community.logo' | translate">
           </ds-comcol-page-logo>
           <!-- Handle -->
           <ds-themed-comcol-page-handle [content]="communityPayload.handle" [title]="'community.page.handle'">
@@ -28,10 +34,12 @@
         <ds-themed-comcol-page-browse-by [id]="communityPayload.id" [contentType]="communityPayload.type">
         </ds-themed-comcol-page-browse-by>
 
-        <ds-themed-community-page-sub-community-list [community]="communityPayload"></ds-themed-community-page-sub-community-list>
-        <ds-themed-community-page-sub-collection-list [community]="communityPayload"></ds-themed-community-page-sub-collection-list>
+        <ds-themed-community-page-sub-community-list
+          [community]="communityPayload"></ds-themed-community-page-sub-community-list>
+        <ds-themed-community-page-sub-collection-list
+          [community]="communityPayload"></ds-themed-community-page-sub-collection-list>
       </section>
-      <footer  *ngIf="communityPayload.copyrightText"  class="border-top my-5 pt-4">
+      <footer *ngIf="communityPayload.copyrightText" class="border-top my-5 pt-4">
         <!-- Copyright -->
         <ds-comcol-page-content [content]="communityPayload.copyrightText" [hasInnerHtml]="true">
         </ds-comcol-page-content>
